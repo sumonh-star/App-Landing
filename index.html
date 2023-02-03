@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>App Landing Main Page</title>
+    <!-- =====link-favicon==== -->
+    <link rel="shortcut icon" href="menu/favicon.svg" type="image/x-icon">
+    <!-- ======link-boxicon==== -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <!-- =====custom-css===== -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/main-home.css">
+    <!-- ======responsive-css======== -->
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+    <div class="app-landing-main-box">
+        <div class="container">
+            <div class="app-landing-box">
+
+                <!-- ===logo==== -->
+                <div class="logo-bar flex">
+                    <img src="images/app-landing-main-img/logo.svg" class="logo">
+                    <a href="##" class="sign-btn">Sign Up</a>
+                </div>
+
+                <!-- ====social-menu=== -->
+                <div class="social-menu-box">
+                    <div class="menu-icon">
+                        <a href="##">
+                            <img src="images/app-landing-main-img/menu.png">
+                        </a>
+                    </div>
+                    <div class="social-link">
+                        <a href="##">
+                            <img src="images/app-landing-main-img/fb.png">
+                        </a>
+                        <a href="##">
+                            <img src="images/app-landing-main-img/ig.png">
+                        </a>
+                        <a href="##">
+                            <img src="images/app-landing-main-img/tw.png">
+                        </a>
+                    </div>
+                    <div class="other-link">
+                        <a href="##">
+                            <img src="images/app-landing-main-img/share.png">
+                        </a>
+                        <a href="##">
+                            <img src="images/app-landing-main-img/info.png">
+                        </a>
+                    </div>
+                </div>
+
+                <!-- ===all-text=== -->
+                <div class="all-text">
+                    <small>Welcome To Our</small>
+                    <h1>App <span>L</span>anding Main <br> Home</h1>
+                    <a href="menu/home.html" class="visit-btn" target="_blank">Visit-Website ></a>
+                </div>
+            </div>
+
+            <!-- ====bubbles==== -->
+            <div class="bubbles flex">
+                <img src="images/app-landing-main-img/bubble.png">
+                <img src="images/app-landing-main-img/bubble.png">
+                <img src="images/app-landing-main-img/bubble.png">
+                <img src="images/app-landing-main-img/bubble.png">
+                <img src="images/app-landing-main-img/bubble.png">
+                <img src="images/app-landing-main-img/bubble.png">
+                <img src="images/app-landing-main-img/bubble.png">
+                <img src="images/app-landing-main-img/bubble.png">
+                <img src="images/app-landing-main-img/bubble.png">
+                <img src="images/app-landing-main-img/bubble.png">
+            </div>
+
+            <!-- ====nav-menu==== -->
+            <div class="home-nav-menu">
+            <ul class="main-home-nav-menu">
+                <li class="nav-list flex active">
+                    <a href="#3" style="--clr:#15be9f"><span><i class='bx bx-home-smile'></i></span></a>
+                </li>
+                <li class="nav-list flex">
+                    <a href="#3" style="--clr:#FEA47F"><span><i class='bx bx-user-circle' ></i></span></a>
+                </li>
+                <li class="nav-list flex">
+                    <a href="#3" style="--clr:#82589F"><span><i class='bx bx-cart' ></i></span></a>
+                </li>
+                <li class="nav-list flex">
+                    <a href="#3" style="--clr:#ff4d4d"><span><i class='bx bx-message-dots'></i></span></a>
+                </li>
+                <li class="nav-list flex">
+                    <a href="#3" style="--clr:#000"><span><i class='bx bx-cog' ></i></span></a>
+                </li>
+                <div class="home-indicator"></div>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<!-- =====reval-js===== -->
+<script src="../js/scrollreveal.min.js"></script>
+    <script>
+        
+// =====main-home-active-line=====
+const list = document.querySelectorAll('.nav-list');
+function activeLink(){
+    list.forEach((item) =>
+    item.classList.remove('active'));
+    this.classList.add('active');
+}
+list.forEach((item) =>
+item.addEventListener('click',activeLink));
+
+
+/*======= SCROLL REVEAL ANIMATION =======*/
+var sr = ScrollReveal({
+  origin: 'top',
+  distance: '200px',
+  duration: 3500,
+  delay: 400,
+  // reset: true
+});
+sr.reveal(`.logo-bar,.other-link,.menu-icon,.all-text`);
+
+sr.reveal(`.social-link`,{origin: 'left'});
+
+sr.reveal(`.nav-icons,.nav-list`,{origin: 'right'});
+
+    </script>
+</body>
+</html>
